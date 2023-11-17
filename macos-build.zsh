@@ -15,7 +15,7 @@ cd $HOME
 mkdir qt-static
 cd qt-static
 
-rm -rf build install qt6.6.0-static-arm64-apple-darwin qt6.6.0-static-x64-apple-darwin qt6.6.0-static-arm64-apple-darwin.tar.gz qt6.6.0-static-x64-apple-darwin.tar.gz
+rm -rf build install qt6.6.0-static-arm64-apple-darwin qt6.6.0-static-x86_64-apple-darwin qt6.6.0-static-arm64-apple-darwin.tar.gz qt6.6.0-static-x86_64-apple-darwin.tar.gz
 
 git clone https://github.com/qt/qtbase.git --recursive
 cd qtbase 
@@ -49,8 +49,8 @@ if [[ $CPUTYPE == arm64 ]]; then
   mv install qt6.6.0-static-arm64-apple-darwin
   tar -czvf qt6.6.0-static-arm64-apple-darwin.tar.gz qt6.6.0-static-arm64-apple-darwin
 else
-  mv install qt6.6.0-static-x64-apple-darwin
-  tar -czvf qt6.6.0-static-x64-apple-darwin.tar.gz qt6.6.0-static-x64-apple-darwin
+  mv install qt6.6.0-static-x86_64-apple-darwin
+  tar -czvf qt6.6.0-static-x86_64-apple-darwin.tar.gz qt6.6.0-static-x86_64-apple-darwin
 fi
 
 echo "Done! Find the package in $HOME/qt-static"
